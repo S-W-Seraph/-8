@@ -1,0 +1,16 @@
+<script>
+function convertMilliseconds(ms) 
+{
+    let seconds=Math.floor(ms/1000);
+    let minutes=Math.floor(seconds/60);
+    let hours=Math.floor(minutes/60);
+    let days=Math.floor(hours/24);
+    return {
+        d: days,
+        h: hours%24,
+        m: minutes%60,
+        s: seconds%60
+    };
+}
+console.log(convertMilliseconds(1056959000));
+</script>

@@ -1,0 +1,24 @@
+<script>
+function getHolidaysDaysOfWeek() 
+{
+    let holidays=[1, 2, 3, 4, 5, 6, 7, 23, 8, 1, 9, 12, 4];
+    let months=[0, 0, 0, 0, 0, 0, 0, 1, 2, 4, 4, 5, 10];
+    let daysOfWeek=['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
+    let year=new Date().getFullYear();
+    for (let i=0; i<holidays.length; i++) 
+    {
+        let date=new Date(year, months[i], holidays[i]);
+        console.log(`${holidays[i]}/${months[i]+1}: ${daysOfWeek[date.getDay()]}`);
+    }
+}
+getHolidaysDaysOfWeek();
+//Здесь указаны следующие праздники:
+//1, 2, 3, 4, 5, 6 января — Новогодние каникулы
+//7 января — Рождество Христово;
+//23 февраля — День защитника Отечества;
+//8 марта — Международный женский день
+//1 мая — Праздник Весны и Труда;
+//9 мая — День Победы;
+//12 июня — День России;
+//4 ноября — День народного единства.
+</script>

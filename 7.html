@@ -1,0 +1,22 @@
+<script>
+window.onload=function() 
+{
+    let now=new Date();
+    let hour=now.getHours();
+    let greeting;
+    if (hour>=6 && hour<12) 
+    {
+        greeting='Доброе утро!';
+    } else if (hour>=12 && hour<18) 
+    {
+        greeting='Добрый день!';
+    } else if (hour>=18 && hour<22) 
+    {
+        greeting='Добрый вечер!';
+    } else 
+    {
+        greeting='Доброй ночи!';
+    }
+    alert(greeting);
+}
+</script>

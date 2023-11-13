@@ -1,0 +1,16 @@
+<script>
+function getDays() 
+{
+    let days=['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
+    let now=new Date();
+    let currDay=now.getDay();
+    let prevDay=(currDay-1+7)%7;
+    let nextDay=(currDay+1)%7;
+    return {
+        next: days[nextDay],
+        curr: days[currDay],
+        prev: days[prevDay]
+    };
+}
+console.log(getDays());
+</script>
